@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Bulb
+    </title>
+    <style>
+        img{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img id="hi" src="offbulb.jpg" height="250px" width="220px">
+    <button onclick="myfunc()" id="off">ON</button>
+    <button onclick="myoff()" id="off">OFF</button>
+
+    <script>
+        function myfunc() {
+           let hi = document.getElementById("hi");
+           hi.src= "onbulb.jfif";
+        }
+        function myoff() {
+           let hi = document.getElementById("hi");
+           hi.src= "offbulb.jpg";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+
+<body>
+    <input id="tval" placeholder="Enter Time">
+    <button onclick="startfun()">SUBMIT</button>
+    <h1 id="head"></h1>
+    <script>
+        function startfun() {
+            let input = document.getElementById("tval");
+            let n = input.value;
+
+            function timer() {
+                if (n >= 0) {
+                    let head = document.getElementById("head").innerText = n;
+                    n--;
+                }
+                else {
+                    head.innerText = "TIMES UPP!";
+                    clearInterval(stop);
+                }
+
+            }
+            let stop = setInterval(timer, 1000);
+
+        }
+    </script>
+</body>
+
+</html>
